@@ -5,23 +5,23 @@
  **/
 
 html {
-	font-size: 16px;
-	color: $black;
+  font-size: 16px;
+  color: $black;
 }
 
 body {
-	font-family: 'Roboto', 'Arial', sans-serif;
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-	hyphens: auto;
-	overflow-wrap: break-word;
-	word-wrap: break-word;
+  font-family: 'gothampro', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .container {
-	@include min-max(320px, 100%, 0);
+  @include min-max(320px, 100%, 0);
 }
 
 .wrap {
-	@include min-max(320px, 1170px, 20px);
+  @include min-max(320px, 1170px, 20px);
 }
