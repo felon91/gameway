@@ -1,0 +1,77 @@
+.navigation {
+
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__item {
+  margin-right: 35px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.navigation__link {
+  color: $white;
+  text-decoration: none;
+  font-size: px-to-rem(18px);
+  line-height: px-to-rem(23px);
+  transition-duration: 500ms;
+  transition-property: color;
+  &:hover {
+    color: $first;
+  }
+}
+
+.navigation__link--btn {
+  background: rgba(43, 54, 28, 0.46);
+  border: 3px solid $first;
+  box-sizing: border-box;
+  border-radius: 30px;
+  font-weight: 700;
+  display: block;
+  width: 154px;
+  text-align: center;
+  padding-top: 6.5%;
+  padding-bottom: 6.5%;
+  position: relative;
+  transform: perspective(1px) translateZ(0);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $first;
+    border-radius: 15px;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  span {
+    padding-right: 25px;
+    background: url("../img/arrow-right.svg") no-repeat right 4px;
+  }
+  &:hover {
+    color: $white;
+    span {
+      animation-name: moveArrow;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+    &::before {
+      transform: scale(1);
+    }
+  }
+}

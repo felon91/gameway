@@ -1,0 +1,59 @@
+.first {
+  background:
+          url("../img/luk-bg.svg") no-repeat left center,
+          url("../img/first-screen-top.png") no-repeat center top $black;
+  background-size: auto, 100%;
+}
+
+.first__wrap {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.first__top {
+  margin: 4.1% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.first__logo {
+  flex-basis: 300px;
+}
+
+.first__content {
+  position: relative;
+  background: url("../img/first-screen.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.first__title {
+  color: $white;
+  font-size: px-to-rem(34px);
+  line-height: px-to-rem(38px);
+  font-weight: 900;
+  max-width: 700px;
+  margin: 6% 39.5% 6% 0;
+}
+
+.first__server {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 38%;
+}
+
+.first__btn {
+  @include button();
+  margin-right: 10px;
+}
+
+.first__btn--two {
+  @include button($first, $white, false);
+}
+
+.first__play {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+}

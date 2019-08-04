@@ -1,0 +1,60 @@
+.server {
+  background: rgba(18, 18, 18, .8);
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: $white;
+  padding: 20px 25px;
+  box-sizing: border-box;
+}
+
+.server__players {
+  font-weight: bold;
+  font-size: px-to-rem(18px);
+  line-height: px-to-rem(22px);
+  color: $white;
+  margin: 0;
+  display: inline-block;
+  padding-right: 20px;
+  background: url("../img/user.svg") no-repeat right center;
+}
+
+.server__ip {
+  color: $first;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  span {
+    margin-right: 20px;
+  }
+}
+
+.server__copy-ip {
+  color: $first;
+  text-decoration: none;
+  border-bottom: 1px solid $first;
+  font-size: px-to-rem(16px);
+  line-height: px-to-rem(20px);
+  transition-property: border-bottom-color;
+  transition-duration: 500ms;
+  display: inline-block;
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.server__progress {
+  background: linear-gradient(0deg, rgba(93, 197, 0, 0.1), rgba(93, 197, 0, 0.1)), linear-gradient(0deg, rgba(226, 226, 226, 0.06), rgba(226, 226, 226, 0.06)), rgba(226, 226, 226, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+  height: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+.server__line {
+  background: $first;
+  box-shadow: 0px 4px 20px $first;
+  border-radius: 5px;
+  height: 13px;
+}

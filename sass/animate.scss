@@ -1,0 +1,11 @@
+@keyframes moveArrow {
+  0% {
+    background-position: right 4px;
+  }
+  50% {
+    background-position: calc(100% - 8px) 4px;
+  }
+  100% {
+    background-position: right 4px;
+  }
+}

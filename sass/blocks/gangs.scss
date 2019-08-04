@@ -1,0 +1,127 @@
+.gangs__txt {
+  color: $white;
+  font-size: px-to-rem(18px);
+  line-height: px-to-rem(22px);
+  margin: 5px 0;
+  span {
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.gangs__persons {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  display: flex;
+  max-width: 522px;
+  width: 100%;
+}
+
+.gangs__btn {
+  background: rgba(0, 0, 0, .8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: block;
+  flex-basis: 162px;
+  margin-right: 18px;
+  padding-bottom: 31%;
+  cursor: pointer;
+  appearance: none;
+  transition-duration: 0.5s;
+  position: relative;
+  outline: none;
+  &:nth-child(1) {
+    span {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 142px;
+      height: 176px;
+      display: block;
+      margin: 0 auto;
+      background: url('../img/sprite-persons.png') -10px -10px;
+    }
+    &:hover {
+      span {
+        background-position: -172px -10px;
+      }
+    }
+  }
+  &:nth-child(1).active {
+    span {
+      background-position: -172px -10px;
+    }
+  }
+  &:nth-child(2) {
+    span {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 102px;
+      height: 195px;
+      display: block;
+      margin: 0 auto;
+      background: url('../img/sprite-persons.png') -10px -206px;
+    }
+    &:hover {
+      span {
+        background-position: -132px -206px;
+      }
+    }
+  }
+  &:nth-child(2).active {
+    span {
+      background-position: -132px -206px;
+    }
+  }
+  &:nth-child(3) {
+    span {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 142px;
+      height: 176px;
+      display: block;
+      margin: 0 auto;
+      background: url('../img/sprite-persons.png') -10px -10px;
+    }
+    &:hover {
+      span {
+        background-position: -172px -10px;
+      }
+    }
+  }
+  &:nth-child(3).active {
+    span {
+      background-position: -172px -10px;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover, &.active {
+    border-color: $first;
+  }
+}
+
+.gangs__btn.active {
+  &::after {
+    background: $first;
+    box-shadow: 0px 4px 20px $first;
+    border-radius: 5px;
+    content: "";
+    height: 4px;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+  }
+}

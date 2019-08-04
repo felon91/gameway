@@ -51,3 +51,95 @@
 @mixin dynamicText($minSizePercent, $maxSize, $minSize, $minWidthPx, $maxWidth, $minWidth) {
   font-size: calc(#{$minSizePercent} + (#{$maxSize} - #{$minSize}) * (100vw - #{$minWidthPx}) / (#{$maxWidth} - #{$minWidth}));
 }
+
+@mixin button
+(
+  $firstColor: $first,
+  $secondColor: $white,
+  $variant: first
+) {
+  @if ($variant != first) {
+    color: $firstColor;
+    border: 1px solid $firstColor;
+    background: transparent;
+    box-shadow: none;
+  } @else {
+    color: $secondColor;
+    border: 1px solid $firstColor;
+    box-shadow: 0px 4px 20px $firstColor;
+    background-color: $secondColor;
+  }
+  text-decoration: none;
+  display: inline-block;
+  width: 384px;
+  font-weight: 700;
+  font-size: px-to-rem(26px);
+  line-height: px-to-rem(50px);
+  padding-top: 1%;
+  padding-bottom: 1.2%;
+  border-radius: 5px;
+  transform: perspective(1px) skew(-20deg) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: color;
+  margin: 35px 0;
+  position: relative;
+  overflow: hidden;
+
+  @if ($variant != first) {
+    &::before {
+      background-color: $firstColor;
+      transform: scale(0);
+    }
+  } @else {
+    &::before {
+      background-color: $firstColor;
+      transform: scale(2);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  @if ($variant != first) {
+    &:hover {
+      color: $secondColor;
+      &::before {
+        transform: scale(2);
+      }
+    }
+  } @else {
+    &:hover {
+      color: $firstColor;
+      &::before {
+        transform: scale(0);
+      }
+      svg {
+        fill: $firstColor;
+      }
+    }
+  }
+
+  svg {
+    position: relative;
+    top: 7px;
+    fill: $secondColor;
+    transition-property: fill;
+    transition-duration: 0.3s;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+    transform: skew(20deg);
+  }
+}

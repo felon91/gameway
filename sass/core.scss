@@ -18,10 +18,16 @@ body {
   word-wrap: break-word;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
   @include min-max(320px, 100%, 0);
 }
 
 .wrap {
-  @include min-max(320px, 1170px, 20px);
+  @include min-max(320px, 1200px, 15px);
 }
