@@ -1,0 +1,116 @@
+.presents {
+  background: url("../img/second-screen.png") no-repeat center;
+  background-size: cover;
+}
+
+.presents--third {
+  background-image: url("../img/police.jpg");
+}
+
+.presents--fourthly {
+  background-image: url("../img/update-bg.png");
+
+  .presents__text {
+
+    &::after {
+      background: linear-gradient(193.57deg, #7FFF0D -11.33%, #5136FC 27.59%, rgba(255, 151, 75, 0) 94.99%);
+      opacity: 0.5;
+      left: 150px;
+    }
+
+  }
+}
+
+.presents--reverse {
+  .presents__text {
+    order: 2;
+    margin-right: 0;
+  }
+
+  .presents__img {
+    order: 1;
+    margin-right: 40px;
+  }
+}
+
+.presents__top {
+  font-size: px-to-rem(24px);
+  line-height: px-to-rem(29px);
+  text-align: center;
+  letter-spacing: 0.255em;
+  color: $white;
+  margin: 20px 0 80px;
+}
+
+.presents__block {
+  display: flex;
+  align-items: center;
+}
+
+.presents__text {
+  flex-basis: 400px;
+  color: $white;
+  margin-right: 40px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 337px;
+    height: 337px;
+    background: linear-gradient(180.35deg, #57F767 43.41%, #00FF38 81.58%, #F10082 125.43%);
+    filter: blur(100px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .3;
+  }
+
+  h2 {
+    font-weight: 900;
+    font-size: px-to-rem(44px);
+    line-height: px-to-rem(54px);
+    color: $white;
+    margin: 30px 0;
+
+    &::after {
+      content: "";
+      background: $first;
+      box-shadow: 0px 4px 20px $first;
+      border-radius: 5px;
+      height: 3px;
+      width: 90%;
+      display: block;
+      margin-top: 30px;
+    }
+
+  }
+
+  p {
+    font-size: px-to-rem(18px);
+    line-height: px-to-rem(30px);
+    margin: 30px 0;
+  }
+
+}
+
+.presents__img {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(93, 197, 0, 0.15);
+  flex-basis: calc(100% - 440px);
+  flex-grow: 1;
+  position: relative;
+  &::after {
+    content: "";
+    background: $first;
+    box-shadow: 0px 4px 20px $first;
+    border-radius: 5px;
+    height: 3px;
+    width: 90%;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
