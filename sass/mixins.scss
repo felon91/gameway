@@ -142,4 +142,12 @@
     text-align: center;
     transform: skew(20deg);
   }
+
+  @media (max-width: 860px) {
+    margin: 25px auto;
+    width: 95%;
+    display: block;
+    font-size: px-to-rem(20px);
+    line-height: px-to-rem(42px);
+  }
 }

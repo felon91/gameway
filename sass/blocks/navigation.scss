@@ -75,3 +75,17 @@
     }
   }
 }
+
+@media (max-width: 990px) {
+  .navigation__item {
+    &:not(:last-child) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation__link--btn {
+    width: 120px;
+  }
+}

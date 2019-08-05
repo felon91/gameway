@@ -52,6 +52,9 @@
 							<a class="server__copy-ip" href="#">скопировать ip сервера</a>
 						</p>
 					</div>
+					<a class="first__play" href="#">
+						<img src="img/play.svg" alt="">
+					</a>
 					<div class="first__gangs gangs">
 						<img class="gangs__title" src="img/gangs.svg" alt="">
 						<p class="gangs__txt">Создай банду “мечты” и спланируй<br> идеальное ограбление <span><svg width="14" height="16" viewBox="0 0 14 16" fill="#D1C80A" xmlns="http://www.w3.org/2000/svg">
@@ -77,16 +80,13 @@
 						</span>
 						</a>
 						<a class="first__btn first__btn--two" href="#"><span>Смотреть плюшки</span></a>
+						<p class="first__presents">PRESENTS...</p>
 					</div>
-					<a class="first__play" href="#">
-						<img src="img/play.svg" alt="">
-					</a>
 				</div>
 			</div>
 		</section>
 		<section class="presents section">
 			<div class="presents__wrap wrap">
-				<p class="presents__top">PRESENTS...</p>
 				<div class="presents__block">
 					<div class="presents__text">
 						<h2>Создай свою организацию</h2>
@@ -129,9 +129,56 @@
 </div>
 <script src="js/all.min.js"></script>
 <script>
-  let myFullpage = new fullpage('.fullpage', {
-    scrollOverflow: true
-  });
+  window.addEventListener('resize', throttle(checkFullPage, 500));
+
+  if (window.innerWidth >= 990) {
+    initialization();
+  }
+
+  function throttle(func, ms) {
+
+    let isThrottled = false,
+        savedArgs,
+        savedThis;
+
+    function wrapper() {
+
+      if (isThrottled) {
+        savedArgs = arguments;
+        savedThis = this;
+        return;
+      }
+
+      func.apply(this, arguments);
+
+      isThrottled = true;
+
+      setTimeout(function() {
+        isThrottled = false;
+        if (savedArgs) {
+          wrapper.apply(savedThis, savedArgs);
+          savedArgs = savedThis = null;
+        }
+      }, ms);
+    }
+
+    return wrapper;
+  }
+
+  function checkFullPage() {
+    if (window.innerWidth <= 990) {
+      fullpage_api.destroy('all');
+		} else {
+      initialization();
+    }
+	}
+
+  function initialization(){
+    let myFullpage = new fullpage('.fullpage', {
+      scrollOverflow: true,
+      responsiveWidth: 990
+    });
+  }
 </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   top: 0;
   z-index: 1;
   width: 100%;
-  background-color: $black;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .fixed-menu__wrap {
@@ -18,4 +18,19 @@
 
 .fixed-menu__logo {
   flex-basis: 300px;
+}
+
+@media (max-width: 640px) {
+  .fixed-menu__logo {
+    flex-basis: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fixed-menu__logo {
+    flex-basis: 160px;
+  }
+  .fixed-menu__wrap {
+    margin: 20px 0;
+  }
 }

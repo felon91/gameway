@@ -75,3 +75,55 @@
   left: 50%;
   top: 25%;
 }
+
+.first__presents {
+  font-size: px-to-rem(24px);
+  line-height: px-to-rem(29px);
+  text-align: center;
+  letter-spacing: 0.255em;
+  color: $white;
+  margin: 20px 0;
+}
+
+@media (max-width: 990px) {
+  .first {
+    background: url("../img/first-screen-top.png") no-repeat center top $black;
+    background-size: 100%;
+  }
+
+  .first__title {
+    margin: 30px 0;
+  }
+
+  .first__server {
+    position: static;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .first__play {
+    left: 60%;
+    top: 32%;
+  }
+}
+
+@media (max-width: 640px) {
+  .first__play {
+    position: static;
+    display: block;
+    img {
+      margin: 20px auto;
+    }
+  }
+  .first__title {
+    font-size: px-to-rem(26px);
+    line-height: px-to-rem(30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .first__title {
+    font-size: px-to-rem(22px);
+    line-height: px-to-rem(26px);
+  }
+}

@@ -125,3 +125,55 @@
     left: 0;
   }
 }
+
+@media (max-width: 860px) {
+  .gangs__persons {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gangs__persons {
+    max-width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .gangs__btn {
+    flex-basis: 30%;
+    padding-bottom: 30%;
+  }
+  .gangs__txt {
+    br {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .gangs__persons {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .gangs__btn {
+    flex-basis: 48%;
+    padding-bottom: 48%;
+    margin: 20px 1%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gangs__persons {
+    flex-direction: column;
+    justify-content: stretch;
+  }
+  .gangs__btn {
+    flex-basis: auto;
+    padding-bottom: 60%;
+    width: 60%;
+    margin: 20px auto;
+    &:last-child {
+      margin: 20px auto;
+    }
+  }
+}
