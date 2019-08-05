@@ -1,0 +1,21 @@
+.fixed-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: $black;
+}
+
+.fixed-menu__wrap {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.fixed-menu__logo {
+  flex-basis: 300px;
+}
