@@ -1,0 +1,88 @@
+.how-to-play {
+  background:
+          url("../img/luk-bg-right.svg") no-repeat right bottom,
+          url("../img/how-to-play-bg.jpg") no-repeat center;
+  background-size: auto, cover;
+}
+
+.how-to-play__wrap {
+  padding-top: 112px;
+  padding-bottom: 40px;
+}
+
+.how-to-play__title {
+  font-weight: 700;
+  font-size: px-to-rem(45px);
+  line-height: px-to-rem(55px);
+  color: $white;
+  text-align: center;
+  margin: 20px 0;
+
+  span {
+    position: relative;
+    padding-right: 80px;
+    padding-left: 80px;
+    &::after {
+      content: "";
+      background: url("../img/title-lines.svg") no-repeat;
+      width: 73px;
+      height: 46px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &::before {
+      content: "";
+      background: url("../img/title-lines.svg") no-repeat;
+      width: 73px;
+      height: 46px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+}
+
+.how-two-play__block {
+  display: flex;
+}
+
+.how-two-play__svg {
+  flex-basis: 300px;
+  flex-shrink: 0;
+  margin-right: 150px;
+  margin-top: 40px;
+}
+
+.how-two-play__step {
+  margin: 30px 0;
+
+  p {
+    margin: 15px 0;
+    font-size: px-to-rem(20px);
+    line-height: px-to-rem(30px);
+    color: $white;
+    opacity: 0.8;
+    &:first-child {
+      font-weight: 700;
+      font-size: px-to-rem(34px);
+      line-height: px-to-rem(41px);
+      color: $white;
+    }
+    span {
+      color: #6C6C6C;
+    }
+  }
+}
+
+.how-two-play__btn {
+  @include button();
+  margin: 15px 0;
+}
+
+.how-two-play__btn--two {
+  @include button($first, $white, false);
+  margin: 15px 0;
+}

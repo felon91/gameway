@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 377 801" style="enable-background:new 0 0 377 801;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:10;}
+	.st1{opacity:0.3;}
+	.st2{fill:#5DC500;}
+	.st3{fill:#5DC500;fill-opacity:5.000000e-02;}
+	.st4{fill:url(#SVGID_2_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="161.2967" y1="764.0164" x2="179.2967" y2="-18.4836" gradientTransform="matrix(1 0 0 -1 0 796)">
+	<stop  offset="0" style="stop-color:#5DC500;stop-opacity:0"/>
+	<stop  offset="0.6754" style="stop-color:#5DC500"/>
+</linearGradient>
+<path class="st0" d="M270,29l56.5,42c-1.5,3.2-14.9,10.2-56.5,13s-62.7,11.8-68,16c-5.3,16.8-22.5,53.4-48.5,65S65,195.8,37,204
+	c3.8,16.2,9.2,55.3,0,82.5c-11.5,34-35,5-30.5,27.5c4.5,22.5,28.5,51.5,19,71s-19,34-19,61.5c0,22,0,39.5,0,45.5
+	c9.5-7.5,34.7-21.9,59.5-19.5c31,3,64.5-23,76-11.5s15,102,37.5,121.5s53,29.5,64.5,53.5s42.5,53.5,45.5,69.5s7.5,51.5,37,66"/>
+<g class="st1">
+	<circle class="st2" cx="270" cy="29" r="29"/>
+	<circle class="st3" cx="270" cy="29" r="29"/>
+</g>
+<g>
+	<circle class="st2" cx="269.5" cy="28.5" r="10.5"/>
+	<circle class="st2" cx="269.5" cy="28.5" r="10.5"/>
+</g>
+<g class="st1">
+	<circle class="st2" cx="29" cy="378" r="29"/>
+	<circle class="st3" cx="29" cy="378" r="29"/>
+</g>
+<g>
+	<circle class="st2" cx="28.5" cy="377.5" r="10.5"/>
+	<circle class="st2" cx="28.5" cy="377.5" r="10.5"/>
+</g>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="349.0001" y1="62" x2="349.0001" y2="-16.524" gradientTransform="matrix(1 0 0 -1 0 796)">
+	<stop  offset="0" style="stop-color:#62D100"/>
+	<stop  offset="0.891" style="stop-color:#80FF1A;stop-opacity:0.58"/>
+	<stop  offset="1" style="stop-color:#7FFF0D"/>
+</linearGradient>
+<path class="st4" d="M374.6,759.5c-2.7-5.4-7.4-9.3-11.9-13.4l-9.8-9c-0.8-0.8-2.5-3-3.8-3c-1.2,0-2.8,2.1-3.6,2.8l-9.8,9
+	c-3.7,3.4-7.8,6.6-10.6,10.8c-1.4,2.2-2.5,4.6-3.1,7c-1,3.6-1.1,7.4-0.4,11.1c0.7,3.7,2.4,7.2,4.7,10.2c4.6,5.9,11.4,10.9,17,16h0.2
+	c1.1-1,3.9-4.6,5.5-4.6c1.6,0,4.4,3.6,5.5,4.6c3.1-2,5.7-5,8.4-7.5c3.1-2.8,6.6-5.5,9-8.8C377.4,777.4,378.7,767.6,374.6,759.5z
+	 M360.7,785.2c-1.3,1.2-4.1,4.9-6,5.1c-2.4,0.3-3.5-4.2-5.8-4.2c-2.2,0-3.3,3.9-5.5,4.2c-1.2,0.1-2.6-1.8-3.4-2.4
+	c-2.9-2.6-6.3-5.3-8.3-8.6c-3.5-5.8-3.7-13,0.1-18.7c1.8-2.8,4.6-5,7.1-7.3l7.2-6.6c0.7-0.6,1.8-2.2,2.9-2.2c1.6,0,4.6,3.6,5.5,4.8
+	l-10.1,9.2c-4.6,4.2-9.1,8.6-6.8,14.9c1,2.9,3.7,4.4,5.6,6.8h0.2c0.9-1.1,3.9-4.8,5.5-4.8s4.6,3.6,5.5,4.8h0.2
+	c1.1-1.5,2.7-2.5,3.9-4c2.8-3.5,2.8-7.4,1.2-11.2l-5,4.6h-0.2c-1.1-1-5-3.5-5-5.1c0-0.9,1.5-1.8,2.1-2.4l6-5.5
+	c0.6-0.6,1.7-1.9,2.6-1.9c0.8,0,1.6,1,2.2,1.5c1.7,1.5,3.1,3.1,4.2,5.1C371.6,770.1,367.7,778.8,360.7,785.2z"/>
+</svg>
