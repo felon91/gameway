@@ -43,8 +43,14 @@
 }
 
 @media (max-width: 990px) {
+  .socials {
+    justify-content: center;
+  }
   .socials__item {
     flex-basis: 49%;
+    &:first-child {
+      margin-right: 2%;
+    }
   }
 }
 
@@ -52,11 +58,15 @@
   .socials {
     overflow-x: scroll;
     flex-wrap: nowrap;
+    justify-content: flex-start;
   }
   .socials__item {
     flex-shrink: 0;
     flex-basis: 350px;
     margin: 10px;
+    &:first-child {
+      margin-right: 0;
+    }
   }
 }
 
