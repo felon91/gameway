@@ -140,7 +140,16 @@
   }
   .gangs__btn {
     flex-basis: 30%;
-    padding-bottom: 30%;
+    padding-bottom: 0;
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      span {
+        position: static;
+        margin: 0 auto;
+        transform: translateX(0);
+      }
+    }
   }
   .gangs__txt {
     br {
@@ -151,29 +160,20 @@
 
 @media (max-width: 560px) {
   .gangs__persons {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    overflow-x: scroll;
+    overflow-y: auto;
+    margin-bottom: 30px;
+    padding-bottom: 35px;
+    padding-top: 20px;
   }
   .gangs__btn {
-    flex-basis: 48%;
-    padding-bottom: 48%;
-    margin: 20px 1%;
+    flex-basis: 190px;
+    flex-shrink: 0;
   }
 }
 
 @media (max-width: 480px) {
-  .gangs__persons {
-    flex-direction: column;
-    justify-content: stretch;
-  }
   .gangs__btn {
-    flex-basis: auto;
-    padding-bottom: 60%;
-    width: 60%;
-    margin: 20px auto;
-    &:last-child {
-      margin: 20px auto;
-    }
+    flex-basis: 270px;
   }
 }

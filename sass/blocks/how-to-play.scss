@@ -1,8 +1,7 @@
 .how-to-play {
   background:
           url("../img/luk-bg-right.svg") no-repeat right bottom,
-          url("../img/how-to-play-bg.jpg") no-repeat center;
-  background-size: auto, cover;
+          url("../img/how-to-play-bg.jpg") no-repeat right center;
 }
 
 .how-to-play__wrap {
@@ -22,6 +21,7 @@
     position: relative;
     padding-right: 80px;
     padding-left: 80px;
+    display: inline-block;
     &::after {
       content: "";
       background: url("../img/title-lines.svg") no-repeat;
@@ -45,18 +45,16 @@
 
 }
 
-.how-two-play__block {
+.how-to-play__block {
   display: flex;
 }
 
-.how-two-play__svg {
-  flex-basis: 300px;
+.how-to-play__svg {
+  flex-basis: 500px;
   flex-shrink: 0;
-  margin-right: 150px;
-  margin-top: 40px;
 }
 
-.how-two-play__step {
+.how-to-play__step {
   margin: 30px 0;
 
   p {
@@ -67,8 +65,8 @@
     opacity: 0.8;
     &:first-child {
       font-weight: 700;
-      font-size: px-to-rem(34px);
-      line-height: px-to-rem(41px);
+      font-size: px-to-rem(30px);
+      line-height: px-to-rem(36px);
       color: $white;
     }
     span {
@@ -77,12 +75,58 @@
   }
 }
 
-.how-two-play__btn {
+.how-to-play__btn {
   @include button();
   margin: 15px 0;
 }
 
-.how-two-play__btn--two {
+.how-to-play__btn--two {
   @include button($first, $white, false);
   margin: 15px 0;
+}
+
+@media (max-width: 990px) {
+
+  .how-to-play {
+    background: none;
+  }
+
+  .how-to-play__svg {
+    flex-basis: 400px;
+  }
+
+  .how-to-play__wrap {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
+  .how-to-play__step {
+    p {
+      font-size: px-to-rem(16px);
+      line-height: px-to-rem(20px);
+      &:first-child {
+        font-size: px-to-rem(24px);
+        line-height: px-to-rem(28px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .how-to-play__svg {
+    display: none;
+  }
+
+  .how-to-play__title {
+    font-size: px-to-rem(32px);
+    line-height: px-to-rem(36px);
+    span {
+      padding: 0;
+      &::after, &::before {
+        display: none;
+      }
+    }
+  }
+
 }

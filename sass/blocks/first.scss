@@ -108,6 +108,16 @@
 }
 
 @media (max-width: 640px) {
+  .first__wrap {
+    &::after, &::before {
+      display: none;
+    }
+  }
+
+  .first__content {
+    background: none;
+  }
+
   .first__play {
     position: static;
     display: block;

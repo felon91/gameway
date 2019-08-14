@@ -1,16 +1,16 @@
 module.exports = function () {
   $.gulp.task('svg', function () {
-    return $.gulp.src('img/**/*.svg')
+    return $.gulp.src('img/sprite/**/*.svg')
         .pipe($.gp.svgmin({
-          js2svg: {
-            pretty: true
-          }
+          // js2svg: {
+          //  pretty: true
+          // }
         }))
         .pipe($.gp.cheerio({
           run: function ($) {
             $('[fill]').removeAttr('fill');
             $('[stroke]').removeAttr('stroke');
-            $('[style]').removeAttr('style');
+            //$('[style]').removeAttr('style');
           },
           parserOptions: {xmlMode: true}
         }))
