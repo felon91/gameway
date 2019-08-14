@@ -54,7 +54,7 @@
 }
 
 .how-to-play__step {
-  margin: 10px 0;
+  margin: 30px 0;
 
   p {
     margin: 10px 0;
@@ -77,11 +77,19 @@
 .how-to-play__btn {
   @include button();
   margin: 15px 0;
+  padding: 5px 0;
+  margin-bottom: 0;
+  font-size: px-to-rem(24px);
+  line-height: px-to-rem(36px);
 }
 
 .how-to-play__btn--two {
   @include button($first, $white, false);
   margin: 15px 0;
+  padding: 5px 0;
+  margin-bottom: 0;
+  font-size: px-to-rem(24px);
+  line-height: px-to-rem(36px);
 }
 
 @media (max-width: 990px) {
