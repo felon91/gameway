@@ -36,7 +36,7 @@
 }
 
 .socials__btn--two {
-  @include button($first, $white, false);
+  @include button($first, $white, true);
   width: 85%;
   font-size: px-to-rem(20px);
   margin-top: 10px;

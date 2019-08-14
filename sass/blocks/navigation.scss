@@ -40,31 +40,15 @@
   text-align: center;
   padding-top: 6.5%;
   padding-bottom: 6.5%;
-  position: relative;
-  transform: perspective(1px) translateZ(0);
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $first;
-    border-radius: 15px;
-    transform: scale(0);
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-  }
-
+  transition-duration: 300ms;
+  transition-property: background-color;
   span {
     padding-right: 25px;
     background: url("../img/arrow-right.svg") no-repeat right 4px;
   }
   &:hover {
     color: $white;
+    background-color: $first;
     span {
       animation-name: moveArrow;
       animation-duration: 1s;
