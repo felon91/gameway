@@ -4,7 +4,19 @@
 }
 
 .presents--third {
-  background-image: url("../img/police.jpg");
+  background-image: url("../img/police-dark.jpg");
+  position: relative;
+  z-index: 1;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
 }
 
 .presents--fourthly {
@@ -36,6 +48,8 @@
 .presents__wrap {
   padding-top: 112px;
   padding-bottom: 40px;
+  z-index: 2;
+  position: relative;
 }
 
 .presents__block {

@@ -74,6 +74,11 @@
   position: absolute;
   left: 50%;
   top: 25%;
+  img {
+    animation-name: scalePlay;
+    animation-duration: 2500ms;
+    animation-iteration-count: infinite;
+  }
 }
 
 .first__presents {

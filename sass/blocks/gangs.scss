@@ -28,12 +28,11 @@
   flex-basis: 162px;
   margin-right: 18px;
   padding-bottom: 31%;
-  cursor: pointer;
   appearance: none;
   transition-duration: 0.5s;
   position: relative;
   outline: none;
-  &:nth-child(1) {
+  &--second {
     span {
       position: absolute;
       left: 50%;
@@ -51,12 +50,12 @@
       }
     }
   }
-  &:nth-child(1).active {
+  &--second.active {
     span {
       background-position: -172px -10px;
     }
   }
-  &:nth-child(2) {
+  &--first {
     span {
       position: absolute;
       left: 50%;
@@ -74,32 +73,9 @@
       }
     }
   }
-  &:nth-child(2).active {
+  &--first.active {
     span {
       background-position: -132px -206px;
-    }
-  }
-  &:nth-child(3) {
-    span {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
-      width: 142px;
-      height: 176px;
-      display: block;
-      margin: 0 auto;
-      background: url('../img/sprite-persons.png') -10px -10px;
-    }
-    &:hover {
-      span {
-        background-position: -172px -10px;
-      }
-    }
-  }
-  &:nth-child(3).active {
-    span {
-      background-position: -172px -10px;
     }
   }
   &:last-child {
@@ -107,6 +83,28 @@
   }
   &:hover, &.active {
     border-color: $first;
+  }
+  &--not-active {
+    &::before {
+      content: 'Coming soon';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      padding: 15px 10px;
+      background-color: $red;
+      font-size: px-to-rem(14px);
+      line-height: px-to-rem(18px);
+      color: $white;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      width: 60%;
+    }
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      span {
+        background-position: -10px -10px;
+      }
+    }
   }
 }
 
@@ -135,7 +133,6 @@
 @media (max-width: 640px) {
   .gangs__persons {
     max-width: 100%;
-    justify-content: space-between;
     margin-top: 40px;
   }
   .gangs__btn {
