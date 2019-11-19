@@ -1,0 +1,25 @@
+.modal__close {
+  background: none;
+  border: none;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  background-color: $white;
+  box-shadow: 0 0 5px 1px $black;
+  border-radius: 50%;
+  font-size: px-to-rem(20px);
+  line-height: px-to-rem(20px);
+  font-weight: 700;
+  &:hover {
+    color: lighten($black, 35%);
+  }
+}
+
+.modal__block {
+  @include adaptive-video;
+}

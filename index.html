@@ -9,6 +9,16 @@
 </head>
 <body>
 <div class="container">
+  <div class="popup">
+    <div data-popup="close" class="popup__center">
+      <div class="popup__block modal">
+        <button data-popup="close" class="modal__close">X</button>
+        <div class="modal__block">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/ptq91sqTUDI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 	<div class="fixed-menu">
 		<div class="fixed-menu__wrap wrap">
 			<div class="fixed-menu__logo logo">
@@ -52,7 +62,7 @@
 							<a class="server__copy-ip" href="#">скопировать ip сервера</a>
 						</p>
 					</div>
-					<a class="first__play" href="#">
+					<a data-popup="video" class="first__play" href="#">
 						<img src="img/play.svg" alt="">
 					</a>
 					<div class="first__gangs gangs">
@@ -68,7 +78,7 @@
 								<span></span>
 							</button>
 						</div>
-						<a class="first__btn" href="#">
+						<a class="first__btn" href="#howToPlay">
 						<span>
 							Давай, погнали уже
 							<svg width="26" height="30" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
@@ -76,7 +86,7 @@
 							</svg>
 						</span>
 						</a>
-						<a class="first__btn first__btn--two" href="#"><span>Смотреть плюшки</span></a>
+						<a class="first__btn first__btn--two" href="#secondScreen"><span>Смотреть плюшки</span></a>
 						<p class="first__presents">PRESENTS...</p>
 					</div>
 				</div>

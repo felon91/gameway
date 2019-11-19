@@ -1,7 +1,19 @@
 window.addEventListener('resize', throttle(checkFullPage, 500));
+document.querySelectorAll('[data-popup="video"]').forEach(function(item) {
+  item.addEventListener('click', openPopup);
+});
 
-if (window.innerWidth >= 990) {
-  initialization();
+document.querySelector('[data-popup="close"]').addEventListener('click', closePopup);
+document.querySelector('[data-popup="close"]').addEventListener('click', closePopup);
+
+function openPopup(evt) {
+  evt.preventDefault();
+  document.querySelector('.popup').classList.add('popup--active');
+}
+
+function closePopup(evt) {
+  evt.preventDefault();
+  document.querySelector('.popup').classList.remove('popup--active');
 }
 
 function throttle(func, ms) {
@@ -34,22 +46,36 @@ function throttle(func, ms) {
   return wrapper;
 }
 
+let exists = null;
+if (window.innerWidth >= 990) {
+  exists = true;
+  initialization();
+}
+
 function checkFullPage() {
   if (window.innerWidth <= 990) {
-    fullpage_api.destroy('all');
+    if (exists) {
+      fullpage_api.destroy('all');
+      exists = false;
+    }
   } else {
-    initialization();
+    if (!exists) {
+      initialization();
+      exists = true;
+    }
   }
 }
 
 function initialization(){
-  let myFullpage = new fullpage('.fullpage', {
+  let myFullPage = new fullpage('.fullpage', {
     scrollOverflow: true,
     responsiveWidth: 990,
+    licenseKey: 'DB42A1BE-F3064F15-81F794D3-BAFDD808',
   });
 }
 
-let makeItRain = function() {
+
+(function() {
 
   let increment = 0;
   let drops = "";
@@ -70,6 +96,4 @@ let makeItRain = function() {
 
   document.querySelector('.rain.front-row').insertAdjacentHTML('beforeend', drops);
   document.querySelector('.rain.back-row').insertAdjacentHTML('beforeend', backDrops);
-}
-
-makeItRain();
+})();

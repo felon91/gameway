@@ -1,4 +1,5 @@
 const jsfiles = [
+  $.path.jsScrollOverflow,
   $.path.js,
 ];
 
