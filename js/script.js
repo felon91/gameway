@@ -56,10 +56,14 @@ function checkFullPage() {
   if (window.innerWidth <= 990) {
     if (exists) {
       fullpage_api.destroy('all');
+      document.querySelector('[data-anchor="secondScreen"]').id = 'secondScreen';
+      document.querySelector('[data-anchor="howToPlay"]').id = 'howToPlay';
       exists = false;
     }
   } else {
     if (!exists) {
+      document.querySelector('[data-anchor="secondScreen"]').id = '';
+      document.querySelector('[data-anchor="howToPlay"]').id = '';
       initialization();
       exists = true;
     }
