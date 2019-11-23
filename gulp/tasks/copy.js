@@ -3,7 +3,8 @@ module.exports = function () {
     return $.gulp.src([
       'fonts/**/*.{woff,woff2}',
       'img/**',
-      '*.html'
+      '*.html',
+      '*.ico'
     ], {
       base: '.'
     })

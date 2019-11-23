@@ -50,6 +50,9 @@ let exists = null;
 if (window.innerWidth >= 990) {
   exists = true;
   initialization();
+} else {
+  document.querySelector('[data-anchor="secondScreen"]').id = 'secondScreen';
+  document.querySelector('[data-anchor="howToPlay"]').id = 'howToPlay';
 }
 
 function checkFullPage() {
