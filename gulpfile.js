@@ -8,9 +8,10 @@ global.$ = {
   del: require('del'),
   path: {
     config: require('./gulp/config.js'),
-    jquery: './js/jquery.js',
-    jsScrollOverflow: './js/scrolloverflow.min.js',
+    jsScrollOverflow: './js/main/scrolloverflow.min.js',
     js: './js/**/*.js',
+    jsMain: './js/main/*.js',
+    jsDonat: './js/donat/*.js',
   }
 };
 

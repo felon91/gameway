@@ -29,6 +29,10 @@ img {
   @include min-max(320px, 100%, 0);
 }
 
+.container--bg {
+  background: url("../img/donat-bg.jpg") center bottom / cover no-repeat
+}
+
 .wrap {
   @include min-max(320px, 1200px, 15px);
 }

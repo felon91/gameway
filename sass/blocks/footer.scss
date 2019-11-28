@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.footer--no-bg {
+  background: $black;
+}
+
 .footer__wrap {
   padding-top: 112px;
   padding-bottom: 140px;
