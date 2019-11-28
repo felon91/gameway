@@ -23,16 +23,22 @@ function converterShekel(evt) {
     'amount': this.options.amount,
     'amountForDiscount': this.options.amountForDiscount,
     'value': value
-  });
+  }).discount;
 
   let amountDiscount = (discount !== 0) ? (value * discount) / 100 : 0;
   let totalShekel = Math.floor((value + amountDiscount) / relationShekel);
 
   this.el.textContent = `${totalShekel} SH`;
+  activeListItem(additionalDiscount({
+    'amount': this.options.amount,
+    'amountForDiscount': this.options.amountForDiscount,
+    'value': value
+  }).activeItem, bonusList);
 }
 
 function additionalDiscount(options) {
   let discount = 0;
+  let activeItem = 0;
 
   if (
       options.value >= options.amount.first
@@ -40,6 +46,7 @@ function additionalDiscount(options) {
       options.value < options.amount.second
   ) {
     discount = options.amountForDiscount.first;
+    activeItem = 1;
   }
   else if (
       options.value >= options.amount.second
@@ -47,6 +54,7 @@ function additionalDiscount(options) {
       options.value < options.amount.third
   ) {
     discount = options.amountForDiscount.second;
+    activeItem = 2;
   }
   else if (
       options.value >= options.amount.third
@@ -54,6 +62,7 @@ function additionalDiscount(options) {
       options.value < options.amount.fourth
   ) {
     discount = options.amountForDiscount.third;
+    activeItem = 3;
   }
   else if (
       options.value >= options.amount.fourth
@@ -61,11 +70,20 @@ function additionalDiscount(options) {
       options.value < options.amount.fifth
   ) {
     discount = options.amountForDiscount.fourth;
+    activeItem = 4;
   }
   else if (options.value >= options.amount.fifth) {
     discount = options.amountForDiscount.fifth;
+    activeItem = 5;
   }
-  return discount;
+  return {'discount': discount, 'activeItem': activeItem};
+}
+
+function activeListItem(itemNumber, listEl) {
+  for(let i = 0; i < listEl.length; i++) {
+    listEl[i].classList.remove('active');
+  }
+  listEl[itemNumber].classList.add('active');
 }
 
 function payDonate(evt) {
@@ -78,6 +96,4 @@ function payDonate(evt) {
 const $elShekel = document.querySelector('.donat-form__shekel');
 document.querySelector('input[data-amount]').addEventListener('input', {handleEvent: converterShekel, el: $elShekel, options: donatConfig});
 document.querySelector('#donat').addEventListener('submit', payDonate);
-
-let formData = new FormData(donat);
-console.log(formData);
+const bonusList = document.querySelectorAll('.donat__bonus li');
