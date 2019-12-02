@@ -70,15 +70,14 @@
     line-height: px-to-rem(24px);
     text-align: center;
     color: $white;
-    padding: 12px 0;
-    max-width: 300px;
-    width: 100%;
+    padding: 12px 10px;
+    width: 80%;
     display: block;
     cursor: pointer;
-    transition-property: box-shadow, background-color;
+    transition-property: background-color;
     transition-duration: 500ms;
-    &:hover {
-      box-shadow: 0px 4px 50px $shekel;
+    outline: none;
+    &:hover, &:focus {
       background-color: $first;
     }
   }
@@ -113,5 +112,8 @@
 
   .donat-form__btn {
     margin: 0 0 20px 0;
+    button {
+      width: 100%;
+    }
   }
 }
