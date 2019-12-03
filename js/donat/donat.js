@@ -1,13 +1,7 @@
 let donatConfig = {
   relationShekel: 10,
   maxShekel: 99999,
-  amount: {
-    'first': 100,
-    'second': 300,
-    'third': 500,
-    'fourth': 1000,
-    'fifth': 1400,
-  },
+  amount: [100, 300, 500, 1000, 1400],
   amountForDiscount: {
     'first': 20,
     'second': 25,
@@ -47,9 +41,27 @@ function priceLimit(countShekel, inputShekel, value) {
   return value;
 }
 
+function binarySearch(list, item) {
+  let first = 0;
+  let last = list.length - 1;
+  while (first <= last) {
+    let middleItem = Math.floor((first + last) / 2);
+    let guess = list[middleItem];
+    if (guess === item) return middleItem;
+    if (guess >= item) {
+      last = middleItem - 1;
+    } else {
+      first = middleItem + 1;
+    }
+  }
+  //return middleItem;
+}
+
 function additionalDiscount(options) {
   let discount = 0;
   let activeItem = 0;
+
+  console.log(binarySearch(options.amount, options.value));
 
   if (
       options.value >= options.amount.first
