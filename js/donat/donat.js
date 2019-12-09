@@ -1,5 +1,5 @@
 let donatConfig = {
-  relationShekel: 1000,
+  relationShekel: 10,
   maxShekel: 99999,
   amount: {
     'first': 100,
